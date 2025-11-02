@@ -25,7 +25,7 @@ const PresMembres = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Alybaba</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                
+                Codage, dessin, musique, sport et plein d'autres encore : Aly est LA personne la plus flexible. Aucun défi ne lui fait peur !
                 </p>
             </div>
 
