@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+{/* --- import aly from "../assets/aly.jpg"; --- */}
+{/* --- import frisk from "../assets/frisk.jpg"; --- */}
 
 const PresMembres = () => {
   return (
@@ -7,7 +9,7 @@ const PresMembres = () => {
     <div className="container mx-auto px-6">
         <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-stone-50">
-                Membres du serveur
+                <span class="underline decoration-red-500">Membres</span> du serveur
             </h2>
             <p className="text-stone-100 text-xl max-w-2xl mx-auto font-extralight mt-6">
                 Lorem ipsum
@@ -17,11 +19,9 @@ const PresMembres = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {/* --- col 1 --- */}
-            <div className="p-8 rounded-xl border transition-all group bg-white border-gray-200 hover:border-indigo-500/30 dark:bg-linear-to-br dark:from-gray-900 dark:to-black dark:border-gray-800">
-                <div className="rounded-lg w-12 h-12 flex items-center justify-center mb-6 bg-indigo-100 group-hover:bg-indigo-200 dark:bg-indigo-500/10 dark:group-hover:bg-indigo-500/20 transition-all">
-                    <svg className="h-6 w-6 text-indigo-500 dark:text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
+            <div className="p-8 rounded-xl border">
+                <div className="flex items-center justify-center mb-6">
+                    <img className="h-24 w-24"  viewBox="0 0 36 36"/> {/* --- src={aly} --- */}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Alybaba</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
@@ -30,15 +30,13 @@ const PresMembres = () => {
             </div>
 
             {/* --- col 2 --- */}
-            <div className="p-8 rounded-xl border transition-all group bg-white border-gray-200 hover:border-indigo-500/30 dark:bg-linear-to-br dark:from-gray-900 dark:to-black dark:border-gray-800">
-                <div className="rounded-lg w-12 h-12 flex items-center justify-center mb-6  bg-purple-100 group-hover:bg-purple-200 dark:bg-purple-500/10 dark:group-hover:bg-purple-500/20 transition-all">
-                    <svg className="h-6 w-6 text-purple-500 dark:text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
+            <div className="p-8 rounded-xl border">
+                <div className="flex items-center justify-center mb-6">
+                    <img className="h-24 w-24"  viewBox="0 0 36 36"/> {/* --- src={frisk}  --- */}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Frisk</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Fondatrice du serveur et dessinatrice hors-pair. Elle préfère déléguer la gestion du serveur à ses acolytes préféré.es !
+                Fondatrice du serveur et dessinatrice hors-pair. Elle préfère déléguer la gestion du serv à ses acolytes préféré.es !
                 </p>
             </div>
 
@@ -51,7 +49,7 @@ const PresMembres = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Mélo</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Aka la voix de la sagesse, la mama ou encore clumsy queen. Elle est sortie victorieuse du Kahoot 2024 !
+                Aka la voix de la sagesse, la mama ou encore clumsy queen, elle est sortie victorieuse du Kahoot 2024 !
                 </p>
             </div>
         </div>
