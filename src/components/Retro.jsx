@@ -4,11 +4,11 @@ const Banner = () => {
   return ( <div>
     <div className="bg-stone-950">
     <section className="relative">
-        <div className="relative z-10 p-8 md:p-12 lg:px-16 lg:py-24">
+        <div className="relative z-10 p-8 md:p-12 lg:px-16 lg:py-24 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-stone-50">
                 Rétrospective 2025
             </h2>
-            <p className="hidden md:block max-w-lg mt-6 font-extralight text-stone-100 text-lg leading-relaxed">
+            <p className="hidden md:block text-center max-w-lg mt-6 font-light text-stone-100 text-lg leading-relaxed">
             Nombre de messages ? Temps passé en vocal ? <br/> Toutes les statistiques
             2025 du serveur sont disponibles dès maintenant !
             </p>
