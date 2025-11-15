@@ -1,6 +1,7 @@
 import React from 'react';
-{/* --- import aly from "../assets/aly.jpg"; --- */}
-{/* --- import frisk from "../assets/frisk.jpg"; --- */}
+import aly from "../assets/aly.png";
+import frisk from "../assets/frisk.png";
+import melo from "../assets/melo.png";
 
 const PresMembres = () => {
   return (
@@ -21,7 +22,7 @@ const PresMembres = () => {
             {/* --- col 1 --- */}
             <div className="p-8 rounded-xl border">
                 <div className="flex items-center justify-center mb-6">
-                    <img className="h-24 w-24"  viewBox="0 0 36 36"/> {/* --- src={aly} --- */}
+                    <img src={aly}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Alybaba</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
@@ -32,7 +33,7 @@ const PresMembres = () => {
             {/* --- col 2 --- */}
             <div className="p-8 rounded-xl border">
                 <div className="flex items-center justify-center mb-6">
-                    <img className="h-24 w-24"  viewBox="0 0 36 36"/> {/* --- src={frisk}  --- */}
+                    <img src={frisk}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Frisk</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
@@ -41,11 +42,9 @@ const PresMembres = () => {
             </div>
 
             {/* --- col 3 --- */}
-            <div className="p-8 rounded-xl border transition-all group  bg-white border-gray-200 hover:border-indigo-500/30 dark:bg-linear-to-br dark:from-gray-900 dark:to-black dark:border-gray-800">
-                <div className="rounded-lg w-12 h-12 flex items-center justify-center mb-6  bg-blue-100 group-hover:bg-blue-200  dark:bg-blue-500/10 dark:group-hover:bg-blue-500/20 transition-all">
-                    <svg className="h-6 w-6 text-blue-500 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                    </svg>
+            <div className="p-8 rounded-xl border">
+                <div className="flex items-center justify-center mb-6">
+                    <img src={melo} viewBox="0 0 36 36"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Mélo</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
@@ -56,7 +55,7 @@ const PresMembres = () => {
     </div>
 
     <div className="mt-16 text-center">
-      <button className="bg-linear-to-r from-indigo-500 to-purple-500 text-white font-light rounded-md px-8 py-3 hover:opacity-90 transition-all">
+      <button className="bg-linear-to-r from-red-500 to-red-800 text-white font-light rounded-md px-8 py-3 hover:opacity-90 transition-all">
         Découvrir les autres membres
       </button>
     </div>

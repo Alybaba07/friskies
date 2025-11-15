@@ -8,7 +8,7 @@ const Banner = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-stone-50">
                 Rétrospective 2025
             </h2>
-            <p className="hidden md:block text-center max-w-lg mt-6 font-light text-stone-100 text-lg leading-relaxed">
+            <p className="hidden md:block text-center mt-6 font-light text-stone-100 text-lg leading-relaxed">
             Nombre de messages ? Temps passé en vocal ? <br/> Toutes les statistiques
             2025 du serveur sont disponibles dès maintenant !
             </p>
@@ -20,7 +20,7 @@ const Banner = () => {
                 </a>
             </div>
         </div>
-    <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg" style={{background:"linear-gradient(106.89deg, rgba(192,132,252,0.11) 15.73%, rgba(14,165,233,0.41) 15.74%, rgba(232,121,249,0.26) 56.49%, rgba(79,70,229,0.4) 115.91%)"}}
+    <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg" style={{background:"linear-gradient(120deg, rgba(74,222,128,0.20) 15%, rgba(34,197,94,0.35) 50%, rgba(16,185,129,0.30) 85%, rgba(5,150,105,0.45) 120%)"}}
     ></div>
     </section>
     </div>
