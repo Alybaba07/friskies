@@ -55,9 +55,9 @@ const PresMembres = () => {
     </div>
 
     <div className="mt-16 text-center">
-      <button className="bg-linear-to-r from-red-500 to-red-800 text-white font-light rounded-md px-8 py-3 hover:opacity-90 transition-all">
+      <a href="" className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 hover:scale-105 transition-all">
         Découvrir les autres membres
-      </button>
+      </a>
     </div>
 
 </section>
