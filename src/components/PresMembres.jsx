@@ -3,7 +3,7 @@ import aly from "../assets/aly.png";
 import frisk from "../assets/frisk.png";
 import melo from "../assets/melo.png";
 
-const PresMembres = () => {
+function PresMembres() {
   return (
     <div>
 <section className="py-24 bg-stone-950 transition-colors duration-300">
@@ -66,4 +66,4 @@ const PresMembres = () => {
   )
 }
 
-export default PresMembres
+export default PresMembres;

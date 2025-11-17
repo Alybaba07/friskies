@@ -1,7 +1,7 @@
 import React from "react";
 
-const Banner = () => {
-  return ( <div>
+function Retro() {
+  return (
     <div className="bg-stone-950">
     <section className="relative">
         <div className="relative z-10 p-8 md:p-12 lg:px-16 lg:py-24 text-center">
@@ -22,8 +22,7 @@ const Banner = () => {
     ></div>
     </section>
     </div>
-    </div>
   );
 };
 
-export default Banner;
+export default Retro;
