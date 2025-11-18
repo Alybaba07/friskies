@@ -14,7 +14,7 @@ function PresMembres() {
                 <span class="underline decoration-red-500">Membres</span> du serveur
             </h2>
             <p className="text-stone-100 text-xl max-w-2xl mx-auto font-extralight mt-6">
-                Lorem ipsum
+                Le meilleur moyen de découvrir qui compose le serveur, depuis combien de temps ou encore d'apprendre à les connaitre : c'est juste ici ↓
             </p>
         </div>
 
@@ -56,7 +56,7 @@ function PresMembres() {
     </div>
 
     <div className="mt-16 text-center">
-      <div className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 hover:scale-105 transition-all">
+      <div className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 hover:scale-105 transition-all cursor-pointer">
         <Link to='/Members'>Membres</Link>
       </div>
     </div>
