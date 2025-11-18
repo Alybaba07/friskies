@@ -1,9 +1,14 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Members() {
   return (
-  <>
-    <p> Page members </p>
-  </>
+    <>
+    <div>
+      <Header/>
+      <Footer/>
+    </div>
+    </>
   );
 }
 

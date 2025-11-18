@@ -2,6 +2,7 @@ import React from 'react';
 import aly from "../assets/aly.png";
 import frisk from "../assets/frisk.png";
 import melo from "../assets/melo.png";
+import { Link } from "react-router-dom";
 
 function PresMembres() {
   return (
@@ -55,9 +56,9 @@ function PresMembres() {
     </div>
 
     <div className="mt-16 text-center">
-      <a href="" className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 hover:scale-105 transition-all">
-        Découvrir les autres membres
-      </a>
+      <div className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 hover:scale-105 transition-all">
+        <Link to='/Members'>Membres</Link>
+      </div>
     </div>
 
 </section>

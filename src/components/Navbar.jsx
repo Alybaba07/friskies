@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
@@ -15,19 +16,8 @@ function Navbar() {
               </a>
               <div className="md:hidden">
                 <button className="menu-btn text-gray-400 hover:text-gray-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
                   </svg>
                 </button>
               </div>
@@ -36,21 +26,19 @@ function Navbar() {
             <div className="flex-1 items-center mt-8 md:mt-0 md:flex hidden">
               <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-gray-300 hover:text-gray-400">
-                  <a href="">Membres</a>
+                  <Link to='/Members'>Membres</Link>
                 </li>
                 <li className="text-gray-300 hover:text-gray-400">
-                  <a href="">Rétrospective</a>
+                  <Link to='/Wrapped'>Rétrospective</Link>
                 </li>
                 <li className="text-gray-300 hover:text-gray-400">
-                  <a href="">Actus</a>
+                  <Link to='/News'>Actus</Link>
                 </li>
                 <li className="text-gray-300 hover:text-gray-400">
-                  <a href="">A propos</a>
+                  <Link to='/About'>A propos</Link>
                 </li>
                 <li>
-                  <a href="" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-700 duration-150 rounded-full md:inline-flex">
-                    Discord
-                  </a>
+                  <Link to='/Discord' className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-700 duration-150 rounded-full md:inline-flex">Discord</Link>
                 </li>
               </ul>
             </div>

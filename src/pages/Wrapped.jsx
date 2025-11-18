@@ -1,9 +1,14 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Wrapped() {
   return (
-  <>
-    <p> Page wrapped </p>
-  </>
+    <>
+    <div>
+      <Header/>
+      <Footer/>
+    </div>
+    </>
   );
 }
 

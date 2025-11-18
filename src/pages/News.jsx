@@ -1,9 +1,14 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function News() {
   return (
-  <>
-    <p> Page News </p>
-  </>
+    <>
+    <div>
+      <Header/>
+      <Footer/>
+    </div>
+    </>
   );
 }
 
