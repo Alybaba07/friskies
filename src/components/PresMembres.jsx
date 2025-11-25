@@ -11,7 +11,7 @@ function PresMembres() {
     <div className="container mx-auto px-6">
         <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-stone-50">
-                <span class="underline decoration-red-500">Membres</span> du serveur
+                <span className="underline decoration-red-500">Membres</span> du serveur
             </h2>
             <p className="text-stone-100 text-xl max-w-2xl mx-auto font-extralight mt-6">
                 Le meilleur moyen de découvrir qui compose le serveur, depuis combien de temps ou encore d'apprendre à les connaitre : c'est juste ici ↓
