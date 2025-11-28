@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Members from "./pages/Members";
 import Wrapped from "./pages/Wrapped";
+import Wrapped2025 from "./pages/Wrapped2025";
 import News from "./pages/News";
 import About from "./pages/About";
 import Discord from "./pages/Discord";
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/Members" element={<Members/>}/>
         <Route path="/Wrapped" element={<Wrapped/>}/>
+        <Route path="/Wrapped2025" element={<Wrapped2025/>}/>
         <Route path="/News" element={<News/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Discord" element={<Discord/>}/>
