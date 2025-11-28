@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+/* Fleurs */
+.flower, .flower2 {
+  animation: rotateFlower 10s linear infinite;
+}
+
+@keyframes rotateFlower {
+  0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+.petal, .petal2 {
+  position: absolute;
+  width: 30px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.petal-1 { transform: rotate(0deg); }
+.petal-2 { transform: rotate(60deg); }
+.petal-3 { transform: rotate(120deg); }
+.petal-4 { transform: rotate(180deg); }
+.petal-5 { transform: rotate(240deg); }
+.petal-6 { transform: rotate(300deg); }
+
+.center {
+  width: 30px;
+  height: 30px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+}
+
+/* Boutons */
+.retro-btn {
+  display: inline-block;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 15px 40px;
+  margin: 10px;
+  color: #fffce1;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0e100f, #0e100f), linear-gradient(90deg, #78c800, #28a92b);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: transform 0.2s ease;
+}
+
+.retro-btn:hover {
+  transform: translateY(-5px);
+}
+
+.click {
+  color: #42433d;
+  text-decoration: none;
+  font-size: 0.8em;
+}
