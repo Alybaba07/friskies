@@ -26,8 +26,11 @@ function PresMembres() {
                     <img src={aly}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Alybaba</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Codage, dessin, musique, sport et plein d'autres encore : Aly est LA personne la plus flexible. Aucun défi ne lui fait peur !
+                <p className="text-gray-400 font-light leading-relaxed italic">
+                « Code, dessin, musique, sport et plein d'autres encore : Aly est LA personne la plus flexible. Aucun défi ne lui fait peur ! »
+                </p>
+                <p className="text-gray-500 font-light leading-relaxed">
+                -Vincent
                 </p>
             </div>
 
@@ -37,8 +40,8 @@ function PresMembres() {
                     <img src={frisk}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Frisk</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Fondatrice du serveur et dessinatrice hors-pair. Elle préfère déléguer la gestion du serv à ses acolytes préféré.es !
+                <p className="text-gray-400 font-light leading-relaxed">
+                Un véritable électron libre dont la créativité est capable de créer le plus beau des chefs d’œuvre comme la plus énigmatique des blagues
                 </p>
             </div>
 
@@ -48,8 +51,8 @@ function PresMembres() {
                     <img src={melo} viewBox="0 0 36 36"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Mélo</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Aka la voix de la sagesse, la mama ou encore clumsy queen, elle est sortie victorieuse du Kahoot 2024 !
+                <p className="text-gray-400 font-light leading-relaxed">
+                Honnête, drôle et réconfortante à chaque instant, elle peut passer de “voix de la sagesse” à “clumsy queen”, ou encore bien être désignée comme “la mama” !
                 </p>
             </div>
         </div>
