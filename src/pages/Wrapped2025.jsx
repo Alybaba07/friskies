@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import WrappedGen2025 from "../components/WrappedGen2025";
+import { Link } from "react-router-dom";
 
 function Wrapped2025() {
   return (
@@ -17,25 +17,20 @@ function Wrapped2025() {
               2025 touche bientôt à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ?
             </p>
 
-
-        {/* BOUTONS */}
         <div className="flex flex-col items-center gap-6 mt-20">
-          <a href="/WrappedGen2025" className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
-            Rétrospective générale
-          </a>
+          <Link to='/WrappedGen2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          Rétrospective générale
+          </Link>
 
-          <a href="/perso-stats-1" className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
-            Rétrospective personnelle
-          </a>
+          <Link to='/WrappedGen2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          Rétrospective personnelle
+          </Link>
         </div>
 
-        {/* INFOS */}
         <div className="mt-20 text-center text-[#42433d] text-sm">
           <ul className="mt-2">
             <li>Pour plus de détails concernant la rétrospective :</li>
-            <li>
-              <a href="/" className="click">cliquez ici</a>
-            </li>
+            <li> <a href="/" className="click">cliquez ici</a></li>
           </ul>
         </div>
       </div>
