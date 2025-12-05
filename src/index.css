@@ -30,32 +30,3 @@
   background-color: #ffeb3b;
   border-radius: 50%;
 }
-
-/* Boutons */
-.retro-btn {
-  display: inline-block;
-  font-size: 1.5em;
-  text-decoration: none;
-  padding: 15px 40px;
-  margin: 10px;
-  color: #fffce1;
-  font-weight: bold;
-  text-transform: uppercase;
-  background: transparent;
-  border-radius: 30px;
-  border: 2px solid transparent;
-  background-image: linear-gradient(#0e100f, #0e100f), linear-gradient(90deg, #78c800, #28a92b);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: transform 0.2s ease;
-}
-
-.retro-btn:hover {
-  transform: translateY(-5px);
-}
-
-.click {
-  color: #42433d;
-  text-decoration: none;
-  font-size: 0.8em;
-}

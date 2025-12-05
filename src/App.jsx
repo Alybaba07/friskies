@@ -7,6 +7,7 @@ import Wrapped2025 from "./pages/Wrapped2025";
 import News from "./pages/News";
 import About from "./pages/About";
 import Discord from "./pages/Discord";
+import WrappedGen2025 from "./pages/WrappedGen2025"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/News" element={<News/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Discord" element={<Discord/>}/>
+        <Route path="/WrappedGen2025" element={<WrappedGen2025/>}/>
       </Routes>
     </Router>
   );
