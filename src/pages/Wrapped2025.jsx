@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WrappedInfo from "./WrappedInfo";
 import { Link } from "react-router-dom";
 
 function Wrapped2025() {
@@ -18,19 +19,19 @@ function Wrapped2025() {
             </p>
 
         <div className="flex flex-col items-center gap-6 mt-20">
-          <Link to='/WrappedGen2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
           Rétrospective générale
           </Link>
 
-          <Link to='/WrappedGen2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
           Rétrospective personnelle
           </Link>
         </div>
 
-        <div className="mt-20 text-center text-[#42433d] text-sm">
+        <div className="mt-20 text-center text-gray-500 text-xs md:text-sm">
           <ul className="mt-2">
             <li>Pour plus de détails concernant la rétrospective :</li>
-            <li> <a href="/" className="click">cliquez ici</a></li>
+            <li> <Link to='/WrappedInfo'>cliquez ici</Link></li>
           </ul>
         </div>
       </div>
