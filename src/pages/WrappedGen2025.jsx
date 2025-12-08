@@ -52,13 +52,53 @@ function WrappedGen2025() {
     <div className="bg-stone-950 min-h-screen">
       <Navbar/>
 
-        <div className="pt-24 relative w-[90vw] h-[87vh] flex justify-center items-center">
-            <div className="felx transform-transition w-[100%] h-[100%]">
-                <div className="flex h-[100%] justify-center items-center text-center font-[1.5] pt-15%">
-
+    <div className="relative w-[100vw] h-[100vh] flex justify-center items-center">
+        <div className="flex ease-in-out h-[100%] w-[300%]">
+            <div className="flex h-[100%] bg-cover bg-center justify-center items-start pt-[15%] text-center">
+                <div>
+                    <h2 className="hidden" data-translate="msgTotal1"></h2>
+                    <p className="hidden" id="total-messages-line">
+                        <span data-translate="msgTotal2"></span>
+                        <span id="total-messages" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: -webkit-linear-gradient(left, #78c800, #28a92b); font-weight: bold;"></span>
+                        <span style="font-weight: bold;"> messages </span>
+                    </p>
+                    <p className="hidden" data-translate="msgTotal3"></p>
+                </div>
+            </div>
+            <div className="slide">
+                <div>
+                    <h2 className="hidden">Top 5 salons textuels</h2>
+                    <ol className="hidden" id="top-text-channels"></ol>
+                </div>
+            </div>
+            <div className="slide">
+                <div>
+                    <h2 className="hidden">Top 5 membres actifs</h2>
+                    <ol className="hidden" id="top-message-members"></ol>
+                </div>
+            </div>
+            <div className="slide">
+                <div>
+                    <h2 className="hidden">Temps passé en vocal</h2>
+                    <p className="hidden" id="voice-time"></p>
+                </div>
+            </div>
+            <div className="slide">
+                <div>
+                    <h2 className="hidden">Top 5 salons vocaux</h2>
+                    <ol className="hidden" id="top-voice-channels"></ol>
+                </div>
+            </div>
+            <div className="slide">
+                <div>
+                    <h2 className="hidden">Top 5 membres actifs</h2>
+                    <ol className="hidden" id="top-voice-members"></ol>
                 </div>
             </div>
         </div>
+        <a className="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a className="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
       <Footer/>
     </div>
