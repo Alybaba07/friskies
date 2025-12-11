@@ -19,11 +19,11 @@ function Wrapped2025() {
             </p>
 
         <div className="flex flex-col items-center gap-6 mt-20">
-          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Rétrospective générale
           </Link>
 
-          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Rétrospective personnelle
           </Link>
         </div>
