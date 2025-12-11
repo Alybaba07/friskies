@@ -2,66 +2,126 @@ import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 import  {useEffect, useState} from "react";
 
-export default function WrappedGen2025() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [stats, setStats] = useState(null);
-
-  useEffect(() => {
-    fetch("/stats.json")
-      .then((res) => res.json())
-      .then((data) => setStats(data.generalStats))
-      .catch((err) =>
-        console.error("Erreur lors du chargement des stats :", err)
-      );
-  }, []);
-
- const slides = [
-    // SLIDE 1
-    <div className="flex flex-col text-center text-[#fffce1] pt-[15%]">
-      <h2 className="text-3xl font-bold opacity-0 animate-fadeIn">
-        {stats && stats.msgTotal1}
-      </h2>
-
-      <p className="opacity-0 animate-fadeIn delay-500 text-xl">
-        {stats && stats.msgTotal2}{" "}
-        <span className="font-bold bg-gradient-to-r from-[#78c800] to-[#28a92b] text-transparent bg-clip-text">
-          {stats?.totalMessages}
-        </span>{" "}
-        messages
-      </p>
-
-      <p className="opacity-0 animate-fadeIn delay-[1000ms] text-lg">
-        {stats && stats.msgTotal3}
-      </p>
-    </div>,
-  ];
-
-  const nextSlide = () => {
-    if (currentSlide < slides.length - 1)
-      setCurrentSlide(currentSlide + 1);
-  };
-
-  const prevSlide = () => {
-    if (currentSlide > 0)
-      setCurrentSlide(currentSlide - 1);
-  };
-
 function WrappedGen2025() {
+
+let currentSlide = 0;
+const slidesWrapper = document.querySelector(".slides-wrapper");
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+function changeSlide(direction) {
+    const totalSlides = slides.length;
+    
+    // Calculer la nouvelle position de la slide
+    const newSlide = currentSlide + direction;
+
+    // Vérifier que la nouvelle position est dans les limites
+    if (newSlide >= 0 && newSlide < totalSlides) {
+        currentSlide = newSlide;
+        slidesWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateButtons();
+    }
+}
+
+function showTextWithDelay() {
+    const currentSlideElement = slides[currentSlide];
+    const textElements = currentSlideElement.querySelectorAll(".stats-content > *");
+
+    // Masquer tout le texte initialement
+    textElements.forEach(element => {
+        element.style.opacity = 0;
+    });
+
+    // Ajouter un délai pour chaque élément
+    textElements.forEach((element, index) => {
+        setTimeout(() => {
+            element.style.transition = "opacity 0.5s";
+            element.style.opacity = 1;
+        }, index * 500); // Délai de 500ms entre chaque élément
+    });
+}
+
+function addSlideEffect() {
+    slidesWrapper.style.transition = "transform 1s ease-in-out";
+}
+
+addSlideEffect();
+
+fetch('../../public/stats.json')
+  .then(response => response.json())
+  .then(data => {
+    // Manipuler les données du fichier JSON ici
+    document.getElementById("total-messages").textContent = `Messages Totaux : ${data.generalStats.totalMessages}`;
+    document.getElementById("voice-time").textContent = `Temps vocal (14 derniers jours) : ${data.generalStats.voiceTimeLast14Days}`;
+
+    // Top 5 salons textuels
+    const topTextChannels = data.generalStats.topTextChannels.map(channel => 
+        `<li>${channel.channel}: ${channel.messages} messages</li>`
+    ).join('');
+    document.getElementById("top-text-channels").innerHTML = topTextChannels;
+
+    // Top 5 membres avec le plus de messages
+    const topMessageMembers = data.generalStats.topMessageMembers.map(member => 
+        `<li>${member.member}: ${member.messages} messages</li>`
+    ).join('');
+    document.getElementById("top-message-members").innerHTML = topMessageMembers;
+  })
+  .catch(error => {
+    console.error('Erreur lors du chargement des statistiques:', error);
+  });
+
   return (
     <>
-    <div className="bg-stone-950 min-h-screen">
-      <Navbar/>
-
-        <div className="pt-24 relative w-[90vw] h-[87vh] flex justify-center items-center">
-            <div className="felx transform-transition w-[100%] h-[100%]">
-                <div className="flex h-[100%] justify-center items-center text-center font-[1.5] pt-15%">
-
+          <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class=" flex h-[100%] bg-cover bg-center">
+                <div class="stats-content">
+                    <h2 class="hidden" data-translate="msgTotal1"></h2>
+                    <p class="hidden" id="total-messages-line">
+                        <span data-translate="msgTotal2"></span>
+                        <span id="total-messages" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: -webkit-linear-gradient(left, #78c800, #28a92b); font-weight: bold;"></span>
+                        <span style="font-weight: bold;"> messages </span>
+                    </p>
+                    <p class="hidden" data-translate="msgTotal3"></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 salons textuels</h2>
+                    <ol class="hidden" id="top-text-channels"></ol>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 membres actifs</h2>
+                    <ol class="hidden" id="top-message-members"></ol>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Temps passé en vocal</h2>
+                    <p class="hidden" id="voice-time"></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 salons vocaux</h2>
+                    <ol class="hidden" id="top-voice-channels"></ol>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 membres actifs</h2>
+                    <ol class="hidden" id="top-voice-members"></ol>
                 </div>
             </div>
         </div>
-
-      <Footer/>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
     </>
-  );
-}}
+  )
+}
+
+export default WrappedGen2025;

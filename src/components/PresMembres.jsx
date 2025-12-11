@@ -21,37 +21,37 @@ function PresMembres() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {/* --- col 1 --- */}
-            <div className="p-8 rounded-xl border">
+            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-blue-900">
                 <div className="flex items-center justify-center mb-6">
                     <img src={aly}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Alybaba</h3>
-                <p className="text-gray-400 font-light leading-relaxed italic">
+                <p className="text-stone-200 font-light leading-relaxed italic">
                 « Code, dessin, musique, sport et plein d'autres encore : Aly est LA personne la plus flexible. Aucun défi ne lui fait peur ! »
                 </p>
-                <p className="text-gray-500 font-light leading-relaxed">
+                <p className="text-gray-300 font-light leading-relaxed">
                 -Vincent
                 </p>
             </div>
 
             {/* --- col 2 --- */}
-            <div className="p-8 rounded-xl border">
+            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-red-800">
                 <div className="flex items-center justify-center mb-6">
                     <img src={frisk}/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Frisk</h3>
-                <p className="text-gray-400 font-light leading-relaxed">
+                <p className="text-stone-200 font-light leading-relaxed">
                 Un véritable électron libre dont la créativité est capable de créer le plus beau des chefs d’œuvre comme la plus énigmatique des blagues
                 </p>
             </div>
 
             {/* --- col 3 --- */}
-            <div className="p-8 rounded-xl border">
+            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-red-950">
                 <div className="flex items-center justify-center mb-6">
                     <img src={melo} viewBox="0 0 36 36"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Mélo</h3>
-                <p className="text-gray-400 font-light leading-relaxed">
+                <p className="text-stone-200 font-light leading-relaxed">
                 Honnête, drôle et réconfortante à chaque instant, elle peut passer de “voix de la sagesse” à “clumsy queen”, ou encore bien être désignée comme “la mama” !
                 </p>
             </div>
