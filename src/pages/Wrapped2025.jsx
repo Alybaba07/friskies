@@ -22,7 +22,7 @@ function Wrapped2025() {
           Rétrospective générale
           </Link>
 
-          <Link to='/WrappedGen2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/WrappedPerso2025' className="text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full border-2 border-transparent bg-[linear-gradient(#0e100f,#0e100f),linear-gradient(90deg,#78c800,#28a92b)] bg-origin-border [background-clip:padding-box,border-box] transition-transform duration-200 ease-linear hover:-translate-y-1">
           Rétrospective personnelle
           </Link>
         </div>
