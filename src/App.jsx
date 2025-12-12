@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Discord from "./pages/Discord";
 import WrappedGen2025 from "./pages/WrappedGen2025"
 import WrappedPerso2025 from "./pages/WrappedPerso2025"
+import WrappedInfo from "./pages/WrappedInfo"
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/Discord" element={<Discord/>}/>
         <Route path="/WrappedGen2025" element={<WrappedGen2025/>}/>
         <Route path="/WrappedPerso2025" element={<WrappedPerso2025/>}/>
+        <Route path="/WrappedInfo" element={<WrappedInfo/>}/>
       </Routes>
     </Router>
   );

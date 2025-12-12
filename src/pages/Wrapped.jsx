@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Wrapped2025 from "./Wrapped2025";
 
 function Wrapped() {
   return (
