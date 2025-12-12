@@ -39,7 +39,7 @@ function Navbar() {
             <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 pb-4 md:pb-0">
 
               <li className="text-gray-300 hover:text-gray-400">
-                <Link to="/Members" onClick={() => setOpen(false)}>Membres</Link>
+                <Link to="/TravauxMembers" onClick={() => setOpen(false)}>Membres</Link>
               </li>
 
               <li className="text-gray-300 hover:text-gray-400">

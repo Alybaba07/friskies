@@ -14,7 +14,7 @@ function Retro() {
             2025 du serveur sont disponibles dès maintenant !
             </p>
             <div className="mt-8">
-                <Link to='/Wrapped2025' className="bg-linear-to-r from-lime-500 to-green-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 transition-transform duration-200 ease-linear hover:-translate-y-1 cursor-pointer">Go !</Link>
+                <Link to='/TravauxWrapped2025' className="bg-linear-to-r from-lime-500 to-green-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 transition-transform duration-200 ease-linear hover:-translate-y-1 cursor-pointer">Go !</Link>
             </div>
         </div>
     <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] opacity-80 sm:max-w-md md:max-w-lg" style={{background:"linear-gradient(120deg, rgba(74,222,128,0.20) 15%, rgba(34,197,94,0.35) 50%, rgba(16,185,129,0.30) 85%, rgba(5,150,105,0.45) 120%)"}}
