@@ -1,9 +1,9 @@
 import React from 'react'
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import TravauxMembers from "./pages/TravauxMembers";
+import Members from "./pages/Members";
 import Wrapped from "./pages/Wrapped";
-import TravauxWrapped2025 from "./pages/TravauxWrapped2025";
+import Wrapped2025 from "./pages/Wrapped2025";
 import News from "./pages/News";
 import About from "./pages/About";
 import Discord from "./pages/Discord";
@@ -17,9 +17,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/TravauxMembers" element={<TravauxMembers/>}/>
+        <Route path="/Members" element={<Members/>}/>
         <Route path="/Wrapped" element={<Wrapped/>}/>
-        <Route path="/TravauxWrapped2025" element={<TravauxWrapped2025/>}/>
+        <Route path="/Wrapped2025" element={<Wrapped2025/>}/>
         <Route path="/News" element={<News/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Discord" element={<Discord/>}/>

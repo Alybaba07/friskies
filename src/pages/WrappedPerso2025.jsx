@@ -85,7 +85,7 @@ function WrappedPerso2025() {
   const closeOverlay = () => setSelectedIndex(null);
 
   const nextStat = () => {
-    setStatIndex((s) => (s + 1) % 6); // 6 stats par personne
+    setStatIndex((s) => (s + 1) % 6);
   };
   const prevStat = () => {
     setStatIndex((s) => (s - 1 + 6) % 6);
@@ -114,11 +114,7 @@ function WrappedPerso2025() {
           <section className="py-24">
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {members.map((m, i) => (
-                <div
-                  key={i}
-                  className="bg-zinc-900 p-8 rounded-xl border cursor-pointer hover:scale-105 transition"
-                  onClick={() => openOverlay(i)}
-                >
+                <div key={i} className="bg-zinc-900 p-8 rounded-xl border cursor-pointer hover:scale-105 transition" onClick={() => openOverlay(i)}>
                   <img src={m.img} className="w-36 h-36 mx-auto mb-4" />
                   <h3 className="text-xl text-white">{m.name}</h3>
                 </div>
