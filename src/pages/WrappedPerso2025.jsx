@@ -234,8 +234,6 @@ function WrappedPerso2025() {
                 ✕
               </button>
 
-              <h2 className="text-4xl font-bold mb-12">{member.name}</h2>
-
               <div className="text-3xl font-light mb-10 opacity-0 animate-fade-delayed">
                 {statsList[statIndex]}
               </div>

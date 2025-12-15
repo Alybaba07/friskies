@@ -1,163 +1,79 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Stat from "../../public/stats.json"
 
-export default function WrappedGen2025() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [stats, setStats] = useState(null);
+const statistiques = [{
+  messages: 4215,
+  vocalTime: "32h",
+  mostUsedText: "#general",
+  mostUsedVocal: "Chill Room",
+  bestMonth: "Août",
+  worstMonth: "Février"},
+];
 
-  // Charge les stats
-  useEffect(() => {
-    fetch({Stat})
-      .then((res) => res.json())
-      .then((data) => setStats(data))
-      .catch((err) =>
-        console.error("Erreur lors du chargement des stats :", err)
-      );
-  }, []);
+function WrappedGen2025() {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [statIndex, setStatIndex] = useState(0);
 
-  // Effet d'apparition du texte à chaque slide
-  useEffect(() => {
-    const slides = document.querySelectorAll(".slide");
+  const openOverlay = (index) => {
+    setSelectedIndex(index);
+    setStatIndex(0); // reset stats
+  };
 
-    if (!slides.length) return;
+  const closeOverlay = () => setSelectedIndex(null);
 
-    const currentSlideElement = slides[currentSlide];
-    const textElements = currentSlideElement.querySelectorAll(
-      ".stats-content > *"
-    );
+  const nextStat = () => {
+    setStatIndex((s) => (s + 1) % 6);
+  };
+  const prevStat = () => {
+    setStatIndex((s) => (s - 1 + 6) % 6);
+  };
 
-    textElements.forEach((el) => {
-      el.style.opacity = 0;
-    });
-
-    textElements.forEach((el, index) => {
-      setTimeout(() => {
-        el.style.transition = "opacity .5s";
-        el.style.opacity = 1;
-      }, index * 400);
-    });
-  }, [currentSlide]);
-
-  const totalSlides = 6; // tu avais 6 sections
-
-  function nextSlide() {
-    if (currentSlide < totalSlides - 1) setCurrentSlide(currentSlide + 1);
-  }
-
-  function prevSlide() {
-    if (currentSlide > 0) setCurrentSlide(currentSlide - 1);
-  }
+  const show = selectedIndex !== null;
+  const stats = statistiques[selectedIndex];
+  const statsList = [
+    `Messages envoyés : ${stats?.messages}`,
+    `Temps total en vocal : ${stats?.vocalTime}`,
+    `Salon textuel préféré : ${stats?.mostUsedText}`,
+    `Salon vocal préféré : ${stats?.mostUsedVocal}`,
+    `Mois le plus actif : ${stats?.bestMonth}`,
+    `Mois le moins actif : ${stats?.worstMonth}`,
+  ];
 
   return (
-    <div className="bg-stone-950 min-h-screen text-[#fffce1]">
-      <Navbar />
+    <div className="bg-stone-950 min-h-screen">
+      <Navbar/>
 
-      <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden">
+      {/* WRAPPER DU BODY */}
+      <div className="relative min-h-screen">
 
-        {/* WRAPPER DES SLIDES */}
-        <div
-          className="slides-wrapper flex h-full transition-transform duration-1000 ease-in-out"
-          style={{ width: `${totalSlides * 100}%`, transform: `translateX(-${currentSlide * (100 / totalSlides)}%)` }}
-        >
+        {/* OVERLAY STATS */}
+        {!show && (
+          <div className="absolute inset-0 bg-black bg-opacity-0 animate-fade flex items-center justify-center">
+            <div className="text-white text-center px-6 animate-fade">
 
-          {/* SLIDE 1 */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2 data-translate="msgTotal1"></h2>
-              <p>
-                <span data-translate="msgTotal2"></span>
-                <span
-                  id="total-messages"
-                  style={{
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundImage: "-webkit-linear-gradient(left, #78c800, #28a92b)",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {stats?.generalStats?.totalMessages || "…"}
-                </span>
-                <span style={{ fontWeight: "bold" }}> messages </span>
-              </p>
-              <p data-translate="msgTotal3"></p>
+              <button onClick={closeOverlay} className="absolute top-4 left-4 text-3xl cursor-pointer hover:text-red-400">
+                ✕
+              </button>
+
+              <div className="text-3xl font-light mb-10 opacity-0 animate-fade-delayed">
+                {statsList[statIndex]}
+              </div>
+
+              <div className="flex justify-between w-full px-8">
+                {statIndex > 0 && (
+              <button onClick={prevStat} className="absolute left-4 text-4xl cursor-pointer hover:text-zinc-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M16.62 2.99a1.25 1.25 0 0 0-1.77 0L6.54 11.3a.996.996 0 0 0 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76"/></svg>
+              </button>)}
+
+                {statIndex < statsList.length - 1 && (
+              <button onClick={nextStat} className="absolute right-4 text-4xl cursor-pointer hover:text-zinc-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 0 0 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"/></svg>
+              </button>)}
+              </div>
+
             </div>
           </div>
-
-          {/* SLIDE 2 — Top 5 text channels */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2>Top 5 salons textuels</h2>
-              <ol>
-                {stats?.generalStats?.topTextChannels?.map((ch, i) => (
-                  <li key={i}>{ch.channel} : {ch.messages} messages</li>
-                )) || "…"}
-              </ol>
-            </div>
-          </div>
-
-          {/* SLIDE 3 — Top 5 membres messages */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2>Top 5 membres actifs (messages)</h2>
-              <ol>
-                {stats?.generalStats?.topMessageMembers?.map((m, i) => (
-                  <li key={i}>{m.member} : {m.messages}</li>
-                )) || "…"}
-              </ol>
-            </div>
-          </div>
-
-          {/* SLIDE 4 — Temps vocal */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2>Temps passé en vocal</h2>
-              <p>{stats?.generalStats?.voiceTimeLast14Days || "…"}</p>
-            </div>
-          </div>
-
-          {/* SLIDE 5 — Top 5 salons vocaux */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2>Top 5 salons vocaux</h2>
-              <ol>
-                {stats?.generalStats?.topVoiceChannels?.map((c, i) => (
-                  <li key={i}>{c.channel} : {c.time}</li>
-                )) || "…"}
-              </ol>
-            </div>
-          </div>
-
-          {/* SLIDE 6 — Top 5 membres vocaux */}
-          <div className="slide flex-grow basis-full h-full flex justify-center items-start pt-[15%] text-center text-[1.5em]">
-            <div className="stats-content">
-              <h2>Top 5 membres actifs (vocal)</h2>
-              <ol>
-                {stats?.generalStats?.topVoiceMembers?.map((m, i) => (
-                  <li key={i}>{m.member} : {m.time}</li>
-                )) || "…"}
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        {/* BOUTONS */}
-        {currentSlide > 0 && (
-          <button
-            className="prev absolute left-5 top-[50%] text-5xl cursor-pointer select-none"
-            onClick={prevSlide}
-          >
-            &#10094;
-          </button>
-        )}
-        {currentSlide < totalSlides - 1 && (
-          <button
-            className="next absolute right-5 top-[50%] text-5xl cursor-pointer select-none"
-            onClick={nextSlide}
-          >
-            &#10095;
-          </button>
         )}
       </div>
 
@@ -165,3 +81,5 @@ export default function WrappedGen2025() {
     </div>
   );
 }
+
+export default WrappedGen2025;
