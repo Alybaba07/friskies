@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { SparklesText } from "@/components/ui/sparkles-text"
 
 import temp from "../assets/pp.png";
 // import aaron from "../assets/aaron.png";
@@ -68,7 +69,7 @@ const members = [
                                 mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Charlie", img: temp, stats: {
+  { name: "Charlie", img: charlie, stats: {
                                 messages: 4215,
                                 vocalTime: "32h",
                                 mostUsedText: "#general",
@@ -82,7 +83,7 @@ const members = [
                                 mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Frisk", img: temp, stats: {
+   { name: "Frisk", img: frisk, stats: {
                                 messages: 4215,
                                 vocalTime: "32h",
                                 mostUsedText: "#general",
@@ -96,7 +97,7 @@ const members = [
                                 mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Kyky", img: temp, stats: {
+  { name: "Kyky", img: kyky, stats: {
                                 messages: 4215,
                                 vocalTime: "32h",
                                 mostUsedText: "#general",
@@ -124,14 +125,14 @@ const members = [
                                 mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Max", img: temp, stats: {
+  { name: "Max", img: max, stats: {
                                 messages: 4215,
                                 vocalTime: "32h",
                                 mostUsedText: "#general",
                                 mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Mélo", img: temp, stats: {
+   { name: "Mélo", img: melo, stats: {
                                 messages: 4215,
                                 vocalTime: "32h",
                                 mostUsedText: "#general",
@@ -181,7 +182,7 @@ function WrappedPerso2025() {
 
   const openOverlay = (index) => {
     setSelectedIndex(index);
-    setStatIndex(0); // reset stats
+    setStatIndex(0);
   };
 
   const closeOverlay = () => setSelectedIndex(null);
@@ -189,6 +190,7 @@ function WrappedPerso2025() {
   const nextStat = () => {
     setStatIndex((s) => (s + 1) % 6);
   };
+
   const prevStat = () => {
     setStatIndex((s) => (s - 1 + 6) % 6);
   };
@@ -227,14 +229,14 @@ function WrappedPerso2025() {
 
         {/* OVERLAY STATS */}
         {show && (
-          <div className="absolute inset-0 bg-black bg-opacity-0 animate-fade flex items-center justify-center">
+          <div className="absolute inset-0 bg-opacity-0 animate-fade flex items-center justify-center">
             <div className="text-white text-center px-6 animate-fade">
 
-              <button onClick={closeOverlay} className="absolute top-4 left-4 text-3xl cursor-pointer hover:text-red-400">
-                ✕
-              </button>
+            <button onClick={closeOverlay} className="absolute top-20 left-8 text-3xl cursor-pointer hover:text-red-400">
+                  ✕
+            </button>
 
-              <div className="text-3xl font-light mb-10 opacity-0 animate-fade-delayed">
+              <div key={statIndex} className="text-3xl font-light mb-10 opacity-0 animate-fade-delayed">
                 {statsList[statIndex]}
               </div>
 

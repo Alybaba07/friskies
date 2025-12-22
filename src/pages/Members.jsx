@@ -142,7 +142,7 @@ function Members() {
                   </div>
 
                   <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <div className="grid grid-cols-2 grid-rows-2 gap-2 h-56 w-56">
                         <div className="bg-zinc-700 rounded-md w-full h-full"></div>
                         <div className="bg-zinc-700 rounded-md w-full h-full"></div>

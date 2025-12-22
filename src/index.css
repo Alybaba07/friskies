@@ -19,5 +19,5 @@
 }
 
 .animate-fade-delayed {
-  animation: fade 1s ease forwards;
+  animation: fade 1.5s ease forwards;
 }
