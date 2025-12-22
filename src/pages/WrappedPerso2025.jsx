@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { SparklesText } from "@/components/ui/sparkles-text"
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 import temp from "../assets/pp.png";
 // import aaron from "../assets/aaron.png";
@@ -230,7 +230,8 @@ function WrappedPerso2025() {
         {/* OVERLAY STATS */}
         {show && (
           <div className="absolute inset-0 bg-opacity-0 animate-fade flex items-center justify-center">
-            <div className="text-white text-center px-6 animate-fade">
+            <BackgroundBeams className="absolute inset-0 z-0" />
+            <div className=" relative text-white text-center px-6 animate-fade">
 
             <button onClick={closeOverlay} className="absolute top-20 left-8 text-3xl cursor-pointer hover:text-red-400">
                   ✕
