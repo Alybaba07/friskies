@@ -67,7 +67,7 @@ function Members() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {members.map((m, i) => (
-                <div key={i} className={`bg-gradient-to-b from-zinc-900 via-zinc-900 ${m.color} p-8 rounded-xl border cursor-pointer hover:scale-105 transition`} onClick={() => openOverlay(i)}>
+                <div key={i} className={`bg-linear-to-b from-zinc-900 via-zinc-900 ${m.color} p-8 rounded-xl border cursor-pointer hover:scale-105 transition`} onClick={() => openOverlay(i)}>
 
                   <div className="flex items-center justify-center mb-6">
                     <img src={m.img} className="w-36 h-36 object-contain"/>
@@ -88,7 +88,7 @@ function Members() {
 
       {selectedIndex !== null && (
           <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
-            <div className="relative bg-zinc-900 text-white p-10 w-[100%] h-[100%] md:w-[90%] md:h-[90%] rounded-xl shadow-xl flex flex-col items-center justify-center overflow-auto">
+            <div className="relative bg-zinc-900 text-white p-10 w-full h-full md:w-[90%] md:h-[90%] rounded-xl shadow-xl flex flex-col items-center justify-center overflow-auto">
               <button onClick={closeOverlay} className="absolute top-4 left-4 text-3xl cursor-pointer hover:text-red-400">
                 ✕
               </button>

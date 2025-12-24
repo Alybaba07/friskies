@@ -1,8 +1,6 @@
-'use client';
-
-import React from "react"
+import * as React from "react"
 import { motion } from "framer-motion"
-import { cn } from "@repo/shadcn-ui/lib/utils"
+import { cn } from "@/lib/utils"
 
 export interface BackgroundBeamsProps {
   className?: string;

@@ -7,7 +7,7 @@ function Retro() {
     <section className="relative">
         <div className="relative z-10 p-8 md:p-12 lg:px-16 lg:py-24 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-stone-50">
-                Rétrospective 2025
+                Flashback 2025
             </h2>
             <p className="text-stone-100 text-xl max-w-2xl mx-auto font-extralight mt-6">
             Nombre de messages ? Temps passé en vocal ? <br/> Toutes les statistiques

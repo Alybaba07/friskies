@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BackgroundBeams } from "../components/ui/shadcn-io/background-beams";
 
 import temp from "../assets/pp.png";
 // import aaron from "../assets/aaron.png";
@@ -187,39 +187,69 @@ function WrappedPerso2025() {
 
   const closeOverlay = () => setSelectedIndex(null);
 
+  const show = selectedIndex !== null;
+  const member = selectedIndex !== null ? members[selectedIndex] : null;
+
+  const slides = member
+    ? [
+        {
+          title:
+            "Pipelette inarrêtable ou plume timide ? Nous avons compté, et voici le résultat :",
+          subtitle: `Tu as envoyé ${member.stats.messages} messages. Feras-tu mieux l'année prochaine ?`,
+        },
+        {
+          title:
+            "L'écrit c'est bien beau, mais as-tu partagé ta belle et douce voix en vocal ?",
+          subtitle: (() => {
+            const hours = parseInt(member.stats.vocalTime);
+            const days = (hours / 24).toFixed(1);
+            return `Tu as passé ${hours} heures, soit près de ${days} jours !`;
+          })(),
+        },
+        {
+          title: "Ton salon textuel favori",
+          subtitle: member.stats.mostUsedText,
+        },
+        {
+          title: "Ton salon vocal préféré",
+          subtitle: member.stats.mostUsedVocal,
+        },
+        {
+          title: "Ton mois le plus actif",
+          subtitle: member.stats.bestMonth,
+        },
+        {
+          title: "Ton mois le plus calme",
+          subtitle: member.stats.worstMonth,
+        },
+      ]
+    : [];
+
   const nextStat = () => {
-    setStatIndex((s) => (s + 1) % 6);
+    setStatIndex((s) => Math.min(s + 1, slides.length - 1));
   };
 
   const prevStat = () => {
-    setStatIndex((s) => (s - 1 + 6) % 6);
+    setStatIndex((s) => Math.max(s - 1, 0));
   };
-
-  const show = selectedIndex !== null;
-  const member = members[selectedIndex];
-  const statsList = [
-    `Messages envoyés : ${member?.stats.messages}`,
-    `Temps total en vocal : ${member?.stats.vocalTime}`,
-    `Salon textuel préféré : ${member?.stats.mostUsedText}`,
-    `Salon vocal préféré : ${member?.stats.mostUsedVocal}`,
-    `Mois le plus actif : ${member?.stats.bestMonth}`,
-    `Mois le moins actif : ${member?.stats.worstMonth}`,
-  ];
 
   return (
     <div className="bg-stone-950 min-h-screen">
-      <Navbar/>
+      <Navbar />
 
-      {/* WRAPPER DU BODY */}
       <div className="relative min-h-screen">
-
-        {/* LISTE DES MEMBRES */}
         {!show && (
           <section className="py-24">
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {members.map((m, i) => (
-                <div key={i} className="bg-zinc-900 p-8 rounded-xl border cursor-pointer hover:scale-105 transition" onClick={() => openOverlay(i)}>
-                  <img src={m.img} className="w-36 h-36 mx-auto mb-4" />
+                <div
+                  key={i}
+                  onClick={() => openOverlay(i)}
+                  className="bg-zinc-900 p-8 rounded-xl cursor-pointer hover:scale-105 transition"
+                >
+                  <div className="flex justify-center mb-6">
+                    <img src={m.img} className="w-36 h-36 object-contain" />
+                  </div>
                   <h3 className="text-xl text-white">{m.name}</h3>
                 </div>
               ))}
@@ -227,33 +257,39 @@ function WrappedPerso2025() {
           </section>
         )}
 
-        {/* OVERLAY STATS */}
-        {show && (
-          <div className="absolute inset-0 bg-opacity-0 animate-fade flex items-center justify-center">
+        {show && member && (
+          <div className="absolute inset-0 flex items-center justify-center">
             <BackgroundBeams className="absolute inset-0 z-0" />
-            <div className=" relative text-white text-center px-6 animate-fade">
 
-            <button onClick={closeOverlay} className="absolute top-20 left-8 text-3xl cursor-pointer hover:text-red-400">
-                  ✕
+            {/* Close */}
+            <button onClick={closeOverlay} className="fixed cursor-pointer top-20 left-8 text-3xl text-white hover:text-red-400 z-20">
+              ✕
             </button>
 
-              <div key={statIndex} className="text-3xl font-light mb-10 opacity-0 animate-fade-delayed">
-                {statsList[statIndex]}
+            {/* Texte */}
+            <div className="relative z-10 text-center px-6 max-w-3xl">
+              <div key={statIndex} className="space-y-6">
+                <p className="text-3xl font-light text-white animate-title">
+                  {slides[statIndex].title}
+                </p>
+
+                <p className="text-xl text-zinc-300 animate-subtitle">
+                  {slides[statIndex].subtitle}
+                </p>
               </div>
-
-              <div className="flex justify-between w-full px-8">
-                {statIndex > 0 && (
-              <button onClick={prevStat} className="absolute left-4 text-4xl cursor-pointer hover:text-zinc-400">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M16.62 2.99a1.25 1.25 0 0 0-1.77 0L6.54 11.3a.996.996 0 0 0 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76"/></svg>
-              </button>)}
-
-                {statIndex < statsList.length - 1 && (
-              <button onClick={nextStat} className="absolute right-4 text-4xl cursor-pointer hover:text-zinc-400">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 0 0 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"/></svg>
-              </button>)}
-              </div>
-
             </div>
+
+            {statIndex > 0 && (
+              <button onClick={prevStat} className="fixed left-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M16.62 2.99a1.25 1.25 0 0 0-1.77 0L6.54 11.3a.996.996 0 0 0 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76"/></svg>
+              </button>
+            )}
+
+            {statIndex < slides.length - 1 && (
+              <button onClick={nextStat} className="fixed right-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 0 0 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"/></svg>
+              </button>
+            )}
           </div>
         )}
       </div>

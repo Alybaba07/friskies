@@ -43,7 +43,7 @@ function Navbar() {
               </li>
 
               <li className="text-gray-300 hover:text-gray-400">
-                <Link to="/Wrapped" onClick={() => setOpen(false)}>Rétrospective</Link>
+                <Link to="/Wrapped" onClick={() => setOpen(false)}>Flashback</Link>
               </li>
 
               <li className="text-gray-300 hover:text-gray-400">
