@@ -30,148 +30,106 @@ const members = [
   { name: "Aaron", img: temp, stats: {
                                 messages: 59,
                                 vocalTime: 285,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
  { name: "Aly", img: aly, stats: {
                                 messages: 3924,
                                 vocalTime: 605,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Amaya", img: temp, stats: {
                                 messages: 111,
                                 vocalTime: 130,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
  { name: "Ayoub", img: temp, stats: {
                                 messages: 724,
                                 vocalTime: 596,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Azu", img: temp, stats: {
                                 messages: 988,
                                 vocalTime: 271,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Booba", img: temp, stats: {
                                 messages: 2942,
                                 vocalTime: 709,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Charlie", img: charlie, stats: {
                                 messages: 876,
                                 vocalTime: 230,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Clem", img: temp, stats: {
                                 messages: 136,
                                 vocalTime: 52,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Frisk", img: frisk, stats: {
                                 messages: 1598,
                                 vocalTime: 142,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Haddamas", img: temp, stats: {
                                 messages: 377,
                                 vocalTime: 679,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Kyky", img: kyky, stats: {
                                 messages: 4215,
                                 vocalTime: 351,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Léguman", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 0,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Letalia", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 30,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Lybur", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 172,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Max", img: max, stats: {
                                 messages: 4215,
                                 vocalTime: 909,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Mélo", img: melo, stats: {
                                 messages: 4215,
                                 vocalTime: 292,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Nymso", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 306,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Pacifica", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 221,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Pelin", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 432,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
    { name: "Renard", img: temp, stats: {
                                 messages: 9967,
                                 vocalTime: 684,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
  { name: "Vince", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 165,
-                                mostUsedText: "#general",
-                                mostUsedVocal: "Chill Room",
                                 bestMonth: "Août",
                                 worstMonth: "Février"}}
 ];
@@ -203,16 +161,8 @@ function WrappedPerso2025() {
           subtitle: (() => {
             const hours = parseInt(member.stats.vocalTime);
             const days = (hours / 24).toFixed(1);
-            return `Tu as passé ${hours} heures, soit près de ${days} jours !`;
+            return `Tu as passé ${hours} heures en vocal, soit près de ${days} jours !`;
           })(),
-        },
-        {
-          title: "Ton salon textuel favori",
-          subtitle: member.stats.mostUsedText,
-        },
-        {
-          title: "Ton salon vocal préféré",
-          subtitle: member.stats.mostUsedVocal,
         },
         {
           title: "Ton mois le plus actif",
