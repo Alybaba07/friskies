@@ -1,21 +1,21 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { BackgroundBeams } from "../components/ui/shadcn-io/background-beams";
+import Silk from '../components/Silk';
 
 import temp from "../assets/pp.png";
 // import aaron from "../assets/aaron.png";
 import aly from "../assets/aly.png";
 // import asma from "../assets/asma.png";
-// import ayoub from "../assets/ayoub.png";
-// import azu from "../assets/azu.png";
-// import booba from "../assets/booba.png";
+import ayoub from "../assets/ayoub.png";
+import azu from "../assets/azu.png";
+import booba from "../assets/booba.png";
 import charlie from "../assets/charlie.png";
-// import clem from "../assets/clem.png";
+import clem from "../assets/clem.png";
 import frisk from "../assets/frisk.png";
-// import haddamas from "../assets/haddamas.png";
+import haddamas from "../assets/haddamas.png";
 import kyky from "../assets/kyky.png";
-// import legu from "../assets/legu.png";
+import legu from "../assets/legu.png";
 // import letalia from "../assets/letalia.png";
 // import lybur from "../assets/lybur.png";
 import max from "../assets/max.png";
@@ -42,17 +42,12 @@ const members = [
                                 vocalTime: 130,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
- { name: "Ayoub", img: temp, stats: {
-                                messages: 724,
-                                vocalTime: 596,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
-   { name: "Azu", img: temp, stats: {
+   { name: "Azu", img: azu, stats: {
                                 messages: 988,
                                 vocalTime: 271,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Booba", img: temp, stats: {
+   { name: "Booba", img: booba, stats: {
                                 messages: 2942,
                                 vocalTime: 709,
                                 bestMonth: "Août",
@@ -62,7 +57,7 @@ const members = [
                                 vocalTime: 230,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Clem", img: temp, stats: {
+  { name: "Clem", img: clem, stats: {
                                 messages: 136,
                                 vocalTime: 52,
                                 bestMonth: "Août",
@@ -72,7 +67,7 @@ const members = [
                                 vocalTime: 142,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Haddamas", img: temp, stats: {
+   { name: "Haddamas", img: haddamas, stats: {
                                 messages: 377,
                                 vocalTime: 679,
                                 bestMonth: "Août",
@@ -82,7 +77,7 @@ const members = [
                                 vocalTime: 351,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Léguman", img: temp, stats: {
+  { name: "Léguman", img: legu, stats: {
                                 messages: 4215,
                                 vocalTime: 0,
                                 bestMonth: "Août",
@@ -131,7 +126,12 @@ const members = [
                                 messages: 4215,
                                 vocalTime: 165,
                                 bestMonth: "Août",
-                                worstMonth: "Février"}}
+                                worstMonth: "Février"}},
+{ name: "Yayourt", img: ayoub, stats: {
+                                messages: 724,
+                                vocalTime: 596,
+                                bestMonth: "Août",
+                                worstMonth: "Février"}},
 ];
 
 function WrappedPerso2025() {
@@ -197,8 +197,8 @@ function WrappedPerso2025() {
                   onClick={() => openOverlay(i)}
                   className="bg-zinc-900 p-8 rounded-xl cursor-pointer hover:scale-105 transition"
                 >
-                  <div className="flex justify-center mb-6">
-                    <img src={m.img} className="w-36 h-36 object-contain" />
+                  <div className="flex justify-center mb-4">
+                    <img src={m.img} className="w-50 h-50 object-contain" />
                   </div>
                   <h3 className="text-xl text-white">{m.name}</h3>
                 </div>
@@ -208,35 +208,40 @@ function WrappedPerso2025() {
         )}
 
         {show && member && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <BackgroundBeams className="absolute inset-0 z-0" />
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="relative w-full h-full">
+              
+              {/* Background */}
+              <Silk opacity={0.8} noiseIntensity={1} className="absolute inset-0 w-full h-full -z-10 pointer-events-none" />
 
-            {/* Close */}
-            <button onClick={closeOverlay} className="fixed cursor-pointer top-20 left-8 text-3xl text-white hover:text-red-400 z-20">
-              ✕
-            </button>
+              {/* Close */}
+              <button onClick={closeOverlay} className="fixed top-20 left-8 z-20 text-3xl cursor-pointer text-white hover:text-red-400">
+                ✕
+              </button>
 
-            {/* Texte */}
-            <div className="relative z-10 text-center px-6 max-w-3xl">
-              <div key={statIndex} className="space-y-6">
-                <p className="text-3xl font-light text-white animate-title">
-                  {slides[statIndex].title}
-                </p>
+              {/* Texte */}
+              <div className="absolute inset-0 z-5000 flex items-center justify-center text-center px-6 pointer-events-none">
 
-                <p className="text-xl text-zinc-300 animate-subtitle">
-                  {slides[statIndex].subtitle}
-                </p>
+                <div className="max-w-3xl space-y-6">
+                  <p className="text-3xl font-light text-white">
+                    {slides[statIndex].title}
+                  </p>
+
+                  <p className="text-xl text-zinc-300">
+                    {slides[statIndex].subtitle}
+                  </p>
+                </div>
               </div>
-            </div>
+          </div>
 
             {statIndex > 0 && (
-              <button onClick={prevStat} className="fixed left-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
+              <button onClick={prevStat} className="absolute left-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M16.62 2.99a1.25 1.25 0 0 0-1.77 0L6.54 11.3a.996.996 0 0 0 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76"/></svg>
               </button>
             )}
 
             {statIndex < slides.length - 1 && (
-              <button onClick={nextStat} className="fixed right-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
+              <button onClick={nextStat} className="absolute right-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width='1em' height='1em'><path fill="currentColor" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 0 0 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"/></svg>
               </button>
             )}
