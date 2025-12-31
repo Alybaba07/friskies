@@ -134,7 +134,7 @@ const members = [
                                 worstMonth: "Février"}},
 ];
 
-function WrappedPerso2025() {
+function FlashbackPerso2025() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [statIndex, setStatIndex] = useState(0);
 
@@ -254,4 +254,4 @@ function WrappedPerso2025() {
   );
 }
 
-export default WrappedPerso2025;
+export default FlashbackPerso2025;

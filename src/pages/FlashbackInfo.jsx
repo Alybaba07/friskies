@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-function WrappedInfo() {
+function FlashbackInfo() {
   return (
     <>
     <div className="bg-stone-950 min-h-screen">
@@ -36,4 +36,4 @@ function WrappedInfo() {
   );
 }
 
-export default WrappedInfo;
+export default FlashbackInfo;

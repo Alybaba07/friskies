@@ -11,14 +11,9 @@ const statistiques = [{
   worstMonth: "Février"},
 ];
 
-function WrappedGen2025() {
+function FlashbackGen2025() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [statIndex, setStatIndex] = useState(0);
-
-  const openOverlay = (index) => {
-    setSelectedIndex(index);
-    setStatIndex(0); // reset stats
-  };
 
   const closeOverlay = () => setSelectedIndex(null);
 
@@ -82,4 +77,4 @@ function WrappedGen2025() {
   );
 }
 
-export default WrappedGen2025;
+export default FlashbackGen2025;

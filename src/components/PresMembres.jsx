@@ -60,7 +60,7 @@ function PresMembres() {
 
     <div className="mt-16 text-center">
       <div className="bg-linear-to-r from-red-500 to-red-800 text-white font-medium rounded-full px-12 py-3 inline-block text-sm hover:opacity-90 transition-transform duration-200 ease-linear hover:-translate-y-1 cursor-pointer">
-        <Link to='/Members'>Membres</Link>
+        <Link to='/TravauxMembers'>Membres</Link>
       </div>
     </div>
 

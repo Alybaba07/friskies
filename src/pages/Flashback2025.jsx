@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-function Wrapped2025() {
+function Flashback2025() {
   return (
     <>
     <div className="bg-stone-950 min-h-screen">
@@ -14,14 +14,14 @@ function Wrapped2025() {
           </h2>
 
             <p className="text-stone-100 text-xl mx-auto font-extralight mt-6">
-              2025 touche bientôt à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ?
+              2025 touche à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ?
             </p>
 
         <div className="flex flex-col items-center gap-6 mt-20">
-          <Link to='/WrappedGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/FlashbackGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Flashback général
           </Link>
-          <Link to='/WrappedPerso2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/FlashbackPerso2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Flashback personnel
           </Link>
         </div>
@@ -29,7 +29,7 @@ function Wrapped2025() {
         <div className="mt-20 text-center text-gray-500 text-xs md:text-sm">
           <ul className="mt-2">
             <li>Pour plus de détails concernant le flashback :</li>
-            <li> <Link to='/WrappedInfo'>cliquez ici</Link></li>
+            <li> <Link to='/FlashbackInfo'>cliquez ici</Link></li>
           </ul>
         </div>
       </div>
@@ -40,4 +40,4 @@ function Wrapped2025() {
   );
 }
 
-export default Wrapped2025;
+export default Flashback2025;
