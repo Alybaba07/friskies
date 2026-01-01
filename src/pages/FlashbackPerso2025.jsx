@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import Silk from '../components/Silk';
 
 import temp from "../assets/pp.png";
-// import aaron from "../assets/aaron.png";
+import aaron from "../assets/aaron.png";
 import aly from "../assets/aly.png";
-// import asma from "../assets/asma.png";
+import amaya from "../assets/amaya.png";
 import ayoub from "../assets/ayoub.png";
 import azu from "../assets/azu.png";
 import booba from "../assets/booba.png";
@@ -16,18 +16,17 @@ import frisk from "../assets/frisk.png";
 import haddamas from "../assets/haddamas.png";
 import kyky from "../assets/kyky.png";
 import legu from "../assets/legu.png";
-// import letalia from "../assets/letalia.png";
-// import lybur from "../assets/lybur.png";
+import letalia from "../assets/letalia.png";
 import max from "../assets/max.png";
 import melo from "../assets/melo.png";
-// import nymso from "../assets/nymso.png";
+import nymso from "../assets/nymso.png";
 import pacifica from "../assets/pacifica.png";
 // import pelin from "../assets/pelin.png";
 import renard from "../assets/renard.png";
-// import vince from "../assets/vince.png";
+import vince from "../assets/vince.png";
 
 const members = [
-  { name: "Aaron", img: temp, stats: {
+  { name: "Aaron", img: aaron, stats: {
                                 messages: 59,
                                 vocalTime: 285,
                                 bestMonth: "Août",
@@ -37,7 +36,7 @@ const members = [
                                 vocalTime: 605,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Amaya", img: temp, stats: {
+  { name: "Amaya", img: amaya, stats: {
                                 messages: 111,
                                 vocalTime: 130,
                                 bestMonth: "Août",
@@ -82,14 +81,9 @@ const members = [
                                 vocalTime: 0,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-  { name: "Letalia", img: temp, stats: {
+  { name: "Letalia", img: letalia, stats: {
                                 messages: 4215,
                                 vocalTime: 30,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
-  { name: "Lybur", img: temp, stats: {
-                                messages: 4215,
-                                vocalTime: 172,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
   { name: "Max", img: max, stats: {
@@ -102,7 +96,7 @@ const members = [
                                 vocalTime: 292,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Nymso", img: temp, stats: {
+   { name: "Nymso", img: nymso, stats: {
                                 messages: 4215,
                                 vocalTime: 306,
                                 bestMonth: "Août",
@@ -111,7 +105,7 @@ const members = [
                                 messages: 4215,
                                 vocalTime: 221,
                                 bestMonth: "Août",
-                                worstMonth: "Février"}},
+                            worstMonth: "Février"}},
    { name: "Pelin", img: temp, stats: {
                                 messages: 4215,
                                 vocalTime: 432,
@@ -122,7 +116,7 @@ const members = [
                                 vocalTime: 684,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
- { name: "Vince", img: temp, stats: {
+ { name: "Vince", img: vince, stats: {
                                 messages: 4215,
                                 vocalTime: 165,
                                 bestMonth: "Août",
@@ -210,24 +204,20 @@ function FlashbackPerso2025() {
         {show && member && (
           <div className="absolute inset-0 overflow-hidden">
             <div className="relative w-full h-full">
-              
-              {/* Background */}
               <Silk opacity={0.8} noiseIntensity={1} className="absolute inset-0 w-full h-full -z-10 pointer-events-none" />
 
-              {/* Close */}
               <button onClick={closeOverlay} className="fixed top-20 left-8 z-20 text-3xl cursor-pointer text-white hover:text-red-400">
                 ✕
               </button>
 
-              {/* Texte */}
               <div className="absolute inset-0 z-5000 flex items-center justify-center text-center px-6 pointer-events-none">
 
                 <div className="max-w-3xl space-y-6">
-                  <p className="text-3xl font-light text-white">
+                  <p key={`title-${statIndex}`} className="text-3xl font-light text-white animate-title">
                     {slides[statIndex].title}
                   </p>
 
-                  <p className="text-xl text-zinc-300">
+                  <p key={`subtitle-${statIndex}`} className="text-xl text-zinc-300 animate-subtitle">
                     {slides[statIndex].subtitle}
                   </p>
                 </div>
