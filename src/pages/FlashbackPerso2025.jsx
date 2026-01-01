@@ -21,9 +21,9 @@ import legu from "../assets/legu.png";
 import max from "../assets/max.png";
 import melo from "../assets/melo.png";
 // import nymso from "../assets/nymso.png";
-// import pacifica from "../assets/pacifica.png";
+import pacifica from "../assets/pacifica.png";
 // import pelin from "../assets/pelin.png";
-// import renard from "../assets/renard.png";
+import renard from "../assets/renard.png";
 // import vince from "../assets/vince.png";
 
 const members = [
@@ -107,7 +107,7 @@ const members = [
                                 vocalTime: 306,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Pacifica", img: temp, stats: {
+   { name: "Pacifica", img: pacifica, stats: {
                                 messages: 4215,
                                 vocalTime: 221,
                                 bestMonth: "Août",
@@ -117,7 +117,7 @@ const members = [
                                 vocalTime: 432,
                                 bestMonth: "Août",
                                 worstMonth: "Février"}},
-   { name: "Renard", img: temp, stats: {
+   { name: "Renard", img: renard, stats: {
                                 messages: 9967,
                                 vocalTime: 684,
                                 bestMonth: "Août",
