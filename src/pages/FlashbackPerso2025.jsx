@@ -29,103 +29,141 @@ const members = [
   { name: "Aaron", img: aaron, stats: {
                                 messages: 59,
                                 vocalTime: 285,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 174,
+                                worstMonth: "Novembre",
+                                worstMonthHours: 5}},
  { name: "Aly", img: aly, stats: {
                                 messages: 3924,
                                 vocalTime: 605,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Juillet",
+                                bestMonthHours: 125,
+                                worstMonth: "Mai",
+                                worstMonthHours: 14}},
   { name: "Amaya", img: amaya, stats: {
                                 messages: 111,
                                 vocalTime: 130,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 65,
+                                worstMonth: "Aout",
+                                worstMonthHours: 4}},
    { name: "Azu", img: azu, stats: {
                                 messages: 988,
                                 vocalTime: 271,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 95,
+                                worstMonth: "Février",
+                                worstMonthHours: 3}},
    { name: "Booba", img: booba, stats: {
                                 messages: 2942,
                                 vocalTime: 709,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Septembre",
+                                bestMonthHours: 209,
+                                worstMonth: "Mars",
+                                worstMonthHours: 0.03}},
   { name: "Charlie", img: charlie, stats: {
                                 messages: 876,
                                 vocalTime: 230,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 96,
+                                worstMonth: "Mai",
+                                worstMonthHours: 0.65}},
   { name: "Clem", img: clem, stats: {
                                 messages: 136,
                                 vocalTime: 52,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Juillet",
+                                bestMonthHours: 18,
+                                worstMonth: "Novembre",
+                                worstMonthHours: 1}},
    { name: "Frisk", img: frisk, stats: {
                                 messages: 1598,
                                 vocalTime: 142,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Mars",
+                                bestMonthHours: 26,
+                                worstMonth: "Juillet",
+                                worstMonthHours: 1}},
    { name: "Haddamas", img: haddamas, stats: {
                                 messages: 377,
                                 vocalTime: 679,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Juillet",
+                                bestMonthHours: 139,
+                                worstMonth: "Mai",
+                                worstMonthHours: 4}},
   { name: "Kyky", img: kyky, stats: {
-                                messages: 4215,
+                                messages: 550,
                                 vocalTime: 351,
                                 bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonthHours: 90,
+                                worstMonth: "Avril",
+                                worstMonthHours: 7}},
   { name: "Léguman", img: legu, stats: {
-                                messages: 4215,
+                                messages: 10,
                                 vocalTime: 0,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "None",
+                                worstMonth: "None"}},
   { name: "Letalia", img: letalia, stats: {
-                                messages: 4215,
+                                messages: 8,
                                 vocalTime: 30,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 25,
+                                worstMonth: "Juillet",
+                                worstMonthHours: 5}},
   { name: "Max", img: max, stats: {
-                                messages: 4215,
+                                messages: 3542,
                                 vocalTime: 909,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Octobre",
+                                bestMonthHours: 211,
+                                worstMonth: "Juillet",
+                                worstMonthHours: 6}},
    { name: "Mélo", img: melo, stats: {
-                                messages: 4215,
+                                messages: 308,
                                 vocalTime: 292,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 188,
+                                worstMonth: "Avril",
+                                worstMonthHours: 0.1}},
    { name: "Nymso", img: nymso, stats: {
-                                messages: 4215,
+                                messages: 82,
                                 vocalTime: 306,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Octobre",
+                                bestMonthHours: 132,
+                                worstMonth: "Juillet",
+                                worstMonthHours: 1}},
    { name: "Pacifica", img: pacifica, stats: {
-                                messages: 4215,
+                                messages: 29,
                                 vocalTime: 221,
-                                bestMonth: "Août",
-                            worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 88,
+                                worstMonth: "Novembre",
+                                worstMonthHours: 3}},
    { name: "Pelin", img: temp, stats: {
-                                messages: 4215,
+                                messages: 469,
                                 vocalTime: 432,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Juillet",
+                                bestMonthHours: 107,
+                                worstMonth: "Mai",
+                                worstMonthHours: 0.28}},
    { name: "Renard", img: renard, stats: {
                                 messages: 9967,
                                 vocalTime: 684,
                                 bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonthHours: 130,
+                                worstMonth: "Avril",
+                                worstMonthHours: 5}},
  { name: "Vince", img: vince, stats: {
-                                messages: 4215,
+                                messages: 136,
                                 vocalTime: 165,
                                 bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonthHours: 57,
+                                worstMonth: "Avril",
+                                worstMonthHours: 1}},
 { name: "Yayourt", img: ayoub, stats: {
                                 messages: 724,
                                 vocalTime: 596,
-                                bestMonth: "Août",
-                                worstMonth: "Février"}},
+                                bestMonth: "Janvier",
+                                bestMonthHours: 230,
+                                worstMonth: "Avril",
+                                worstMonthHours: 0.03}},
 ];
 
 function FlashbackPerso2025() {
@@ -153,18 +191,27 @@ function FlashbackPerso2025() {
           title:
             "L'écrit c'est bien beau, mais as-tu partagé ta belle et douce voix en vocal ?",
           subtitle: (() => {
-            const hours = parseInt(member.stats.vocalTime);
+            const hours = member.stats.vocalTime;
             const days = (hours / 24).toFixed(1);
             return `Tu as passé ${hours} heures en vocal, soit près de ${days} jours !`;
           })(),
         },
         {
-          title: "Ton mois le plus actif",
-          subtitle: member.stats.bestMonth,
+          title: "Tu as passé le plus de temps en vocal durant le mois de ...",
+          subtitle: ` ${member.stats.bestMonth} ! En restant ${member.stats.bestMonthHours} heures`,
         },
         {
-          title: "Ton mois le plus calme",
-          subtitle: member.stats.worstMonth,
+          title: `A contrario, ${member.stats.worstMonth} a été une periode bien calme`,
+          subtitle: (() => {
+            const hours = member.stats.worstMonthHours;
+            
+            if (hours < 1) {
+              const minutes = Math.round(hours * 60);
+              return `${minutes} minute${minutes > 1 ? "s" : ""}, c'est assez peu...`;
+            } else {
+              return `${hours} heure${hours > 1 ? "s" : ""}, c'est assez peu...`;
+            }
+          })(),
         },
       ]
     : [];
