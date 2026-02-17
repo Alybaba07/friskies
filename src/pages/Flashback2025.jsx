@@ -18,10 +18,10 @@ function Flashback2025() {
             </p>
 
         <div className="flex flex-col items-center gap-6 mt-20">
-          <Link to='/FlashbackGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/FlashbackGen2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-10 py-[15px] m-2.5 text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Flashback général
           </Link>
-          <Link to='/FlashbackPerso2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-[40px] py-[15px] m-[10px] text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
+          <Link to='/FlashbackPerso2025' className="text-sl md:text-2xl font-bold uppercase no-underline px-10 py-[15px] m-2.5 text-stone-50 rounded-full bg-linear-to-r from-lime-500 to-green-800 transition-transform duration-200 ease-linear hover:-translate-y-1">
           Flashback personnel
           </Link>
         </div>
