@@ -28,7 +28,7 @@ function FlashbackGen2025() {
     },
     {
       title: "Et en vocal alors ?",
-      subtitle: `Un total de ${statistiques.vocalTime} heures passées ensemble.`,
+      subtitle: `Un total de ${statistiques.vocalTime} heures passées ensemble`,
     },
     {
       title: "Le salon textuel favori était...",

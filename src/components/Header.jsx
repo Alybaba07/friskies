@@ -12,7 +12,7 @@ function Header() {
             <h2 class="text-2xl font-bold text-white text-shadow-lg/30 sm:text-3xl md:text-5xl">
               Friskies
             </h2>
-            <p className="max-w-lg text-white text-shadow-lg/30 md:mt-6 md:block md:text-lg md:leading-relaxed">
+            <p className="max-w-lg text-white text-shadow-lg/30 md:mt-6 md:block md:text-xl md:leading-relaxed">
               Le site web du serveur discord Friskies est là !
             </p>
             
