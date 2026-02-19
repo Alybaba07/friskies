@@ -4,10 +4,12 @@ import Footer from "../components/Footer";
 import Silk from "../components/Silk";
 
 const statistiques = {
-  messages: 4215,
-  vocalTime: "32h",
+  messagesCpt: "49 765",
+  messagesTot: "149 549",
+  vocalTime: "8 211",
   mostUsedText: "#general",
-  mostUsedVocal: "Chill Room",
+  mostUsedVocal: "Vocal 1",
+  timeMostUsedVocal: "4 837",
   bestMonth: "Août",
   worstMonth: "Février",
 };
@@ -18,11 +20,15 @@ function FlashbackGen2025() {
   const slides = [
     {
       title: "Cette année, le serveur n’a pas chômé...",
-      subtitle: `Vous avez envoyé ${statistiques.messages} messages !`,
+      subtitle: ` Au total, ${statistiques.messagesTot} messages ont été envoyés, tous salons et membres confondus !`,
+    },
+    {
+      title: `${statistiques.messagesCpt} messages, les vrais de vrai`,
+      subtitle: `Parce que les messages de bots et dans les salons restreints, ne comptent pas vraiment dans l'histoire`,
     },
     {
       title: "Et en vocal alors ?",
-      subtitle: `Un total de ${statistiques.vocalTime} passées ensemble.`,
+      subtitle: `Un total de ${statistiques.vocalTime} heures passées ensemble.`,
     },
     {
       title: "Le salon textuel favori était...",
@@ -69,7 +75,7 @@ function FlashbackGen2025() {
               <div className="max-w-3xl space-y-6">
                 <p
                   key={`title-${statIndex}`}
-                  className="text-3xl font-light text-white animate-title"
+                  className="text-3xl font-light  text-white animate-title"
                 >
                   {slides[statIndex].title}
                 </p>
@@ -87,7 +93,7 @@ function FlashbackGen2025() {
           {statIndex > 0 && (
             <button
               onClick={prevStat}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-4xl text-white hover:text-zinc-400 z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20"
             >
               ‹
             </button>
@@ -96,7 +102,7 @@ function FlashbackGen2025() {
           {statIndex < slides.length - 1 && (
             <button
               onClick={nextStat}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-4xl text-white hover:text-zinc-400 z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-4xl cursor-pointer text-white hover:text-zinc-400 z-20"
             >
               ›
             </button>
