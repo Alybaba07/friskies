@@ -24,124 +24,142 @@ import vince from "../assets/vince.png";
 
 const members = [
   { name: "Aaron", img: aaron, stats: {
-                                messages: 59,
+                                messagesTot: "61",
+                                messages: "59",
                                 vocalTime: 285,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 174,
                                 worstMonth: "Novembre",
                                 worstMonthHours: 5}},
  { name: "Aly", img: aly, stats: {
-                                messages: 3924,
+                                messagesTot: "10 485",
+                                messages: "3 924",
                                 vocalTime: 605,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 125,
                                 worstMonth: "Mai",
                                 worstMonthHours: 14}},
   { name: "Amaya", img: amaya, stats: {
-                                messages: 111,
+                                messagesTot: "149",
+                                messages: "111",
                                 vocalTime: 130,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 65,
                                 worstMonth: "Aout",
                                 worstMonthHours: 4}},
    { name: "Azu", img: azu, stats: {
-                                messages: 988,
+                                messagesTot: "988",
+                                messages: "988",
                                 vocalTime: 271,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 95,
                                 worstMonth: "Février",
                                 worstMonthHours: 3}},
    { name: "Booba", img: booba, stats: {
-                                messages: 2942,
+                                messagesTot: "3 668",
+                                messages: "2 942",
                                 vocalTime: 709,
                                 bestMonth: "Septembre",
                                 bestMonthHours: 209,
                                 worstMonth: "Mars",
                                 worstMonthHours: 0.03}},
   { name: "Charlie", img: charlie, stats: {
-                                messages: 876,
+                                messagesTot: "3 916",
+                                messages: "876",
                                 vocalTime: 230,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 96,
                                 worstMonth: "Mai",
                                 worstMonthHours: 0.65}},
   { name: "Clem", img: clem, stats: {
-                                messages: 136,
+                                messagesTot: "194",
+                                messages: "136",
                                 vocalTime: 52,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 18,
                                 worstMonth: "Novembre",
                                 worstMonthHours: 1}},
    { name: "Frisk", img: frisk, stats: {
-                                messages: 1598,
+                                messagesTot: "1 876",
+                                messages: "1 598",
                                 vocalTime: 142,
                                 bestMonth: "Mars",
                                 bestMonthHours: 26,
                                 worstMonth: "Juillet",
                                 worstMonthHours: 1}},
    { name: "Haddamas", img: haddamas, stats: {
-                                messages: 377,
+                                messagesTot: "1 400",
+                                messages: "377",
                                 vocalTime: 679,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 139,
                                 worstMonth: "Mai",
                                 worstMonthHours: 4}},
   { name: "Léguman", img: legu, stats: {
-                                messages: 10,
+                                messagesTot: "10",
+                                messages: "10",
                                 vocalTime: 0,
                                 bestMonth: "None",
                                 worstMonth: "None"}},
   { name: "Letalia", img: letalia, stats: {
-                                messages: 8,
+                                messagesTot: "8",
+                                messages: "8",
                                 vocalTime: 30,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 25,
                                 worstMonth: "Juillet",
                                 worstMonthHours: 5}},
   { name: "Max", img: max, stats: {
-                                messages: 3542,
+                                messagesTot: "8 698",
+                                messages: "3 542",
                                 vocalTime: 909,
                                 bestMonth: "Octobre",
                                 bestMonthHours: 211,
                                 worstMonth: "Juillet",
                                 worstMonthHours: 6}},
    { name: "Mélo", img: melo, stats: {
-                                messages: 308,
+                                messagesTot: "5 947",
+                                messages: "308",
                                 vocalTime: 292,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 188,
                                 worstMonth: "Avril",
                                 worstMonthHours: 0.1}},
    { name: "Nymso", img: nymso, stats: {
-                                messages: 82,
+                                messagesTot: "82",
+                                messages: "82",
                                 vocalTime: 306,
                                 bestMonth: "Octobre",
                                 bestMonthHours: 132,
                                 worstMonth: "Juillet",
                                 worstMonthHours: 1}},
    { name: "Pacifica", img: pacifica, stats: {
-                                messages: 29,
+                                messagesTot: "2 937",
+                                messages: "29",
                                 vocalTime: 221,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 88,
                                 worstMonth: "Novembre",
                                 worstMonthHours: 3}},
    { name: "Renard", img: renard, stats: {
-                                messages: 9967,
+                                messagesTot: "14 294",
+                                messages: "9 967",
                                 vocalTime: 684,
                                 bestMonth: "Août",
                                 bestMonthHours: 130,
                                 worstMonth: "Avril",
                                 worstMonthHours: 5}},
  { name: "Vince", img: vince, stats: {
-                                messages: 136,
+                                messagesTot: "153",
+                                messages: "136",
                                 vocalTime: 165,
                                 bestMonth: "Août",
                                 bestMonthHours: 57,
                                 worstMonth: "Avril",
                                 worstMonthHours: 1}},
 { name: "Yayourt", img: ayoub, stats: {
-                                messages: 724,
+                                messagesTot: "2 950",
+                                messages: "724",
                                 vocalTime: 596,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 230,
@@ -166,9 +184,12 @@ function FlashbackPerso2025() {
   const slides = member
     ? [
         {
-          title:
-            "Pipelette inarrêtable ou plume timide ? Nous avons compté, et voici le résultat :",
-          subtitle: `Tu as envoyé ${member.stats.messages} messages. Feras-tu mieux l'année prochaine ?`,
+          title: "Pipelette inarrêtable ou plume timide ? Nous avons compté, et voici le résultat :",
+          subtitle: `Tu as envoyé ${member.stats.messagesTot} messages tous salons confondus, sympa sympa...`,
+        },
+        {
+          title: "Mais combien de messages étaient destinés à de réelles conversations ?",
+          subtitle: `${member.stats.messages} messages `,
         },
         {
           title:
@@ -214,13 +235,9 @@ function FlashbackPerso2025() {
       <div className="relative min-h-screen">
         {!show && (
           <section className="py-24">
-            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {members.map((m, i) => (
-                <div
-                  key={i}
-                  onClick={() => openOverlay(i)}
-                  className="bg-zinc-900 p-8 rounded-xl cursor-pointer hover:scale-105 transition"
-                >
+                <div key={i} onClick={() => openOverlay(i)} className="bg-zinc-900 p-8 rounded-xl cursor-pointer hover:scale-105 transition">
                   <div className="flex justify-center mb-4">
                     <img src={m.img} className="w-50 h-50 object-contain" />
                   </div>

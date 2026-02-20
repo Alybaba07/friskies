@@ -21,7 +21,7 @@ function PresMembres() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {/* --- col 1 --- */}
-            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-blue-900">
+            <div className="p-8 rounded-xl bg-linear-to-b from-zinc-900 via-zinc-900 to-blue-900">
                 <div className="flex items-center justify-center mb-6">
                     <img src={aly}/>
                 </div>
@@ -35,7 +35,7 @@ function PresMembres() {
             </div>
 
             {/* --- col 2 --- */}
-            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-red-800">
+            <div className="p-8 rounded-xl bg-linear-to-b from-zinc-900 via-zinc-900 to-red-800">
                 <div className="flex items-center justify-center mb-6">
                     <img src={frisk}/>
                 </div>
@@ -46,7 +46,7 @@ function PresMembres() {
             </div>
 
             {/* --- col 3 --- */}
-            <div className="p-8 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900 to-red-950">
+            <div className="p-8 rounded-xl bg-linear-to-b from-zinc-900 via-zinc-900 to-red-950">
                 <div className="flex items-center justify-center mb-6">
                     <img src={melo} viewBox="0 0 36 36"/>
                 </div>
