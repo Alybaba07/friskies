@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Silk from '../components/Silk';
 
-import temp from "../assets/pp.png";
 import aaron from "../assets/aaron.png";
 import aly from "../assets/aly.png";
 import amaya from "../assets/amaya.png";
@@ -14,14 +13,12 @@ import charlie from "../assets/charlie.png";
 import clem from "../assets/clem.png";
 import frisk from "../assets/frisk.png";
 import haddamas from "../assets/haddamas.png";
-import kyky from "../assets/kyky.png";
 import legu from "../assets/legu.png";
 import letalia from "../assets/letalia.png";
 import max from "../assets/max.png";
 import melo from "../assets/melo.png";
 import nymso from "../assets/nymso.png";
 import pacifica from "../assets/pacifica.png";
-// import pelin from "../assets/pelin.png";
 import renard from "../assets/renard.png";
 import vince from "../assets/vince.png";
 
@@ -89,13 +86,6 @@ const members = [
                                 bestMonthHours: 139,
                                 worstMonth: "Mai",
                                 worstMonthHours: 4}},
-  { name: "Kyky", img: kyky, stats: {
-                                messages: 550,
-                                vocalTime: 351,
-                                bestMonth: "Août",
-                                bestMonthHours: 90,
-                                worstMonth: "Avril",
-                                worstMonthHours: 7}},
   { name: "Léguman", img: legu, stats: {
                                 messages: 10,
                                 vocalTime: 0,
@@ -136,13 +126,6 @@ const members = [
                                 bestMonthHours: 88,
                                 worstMonth: "Novembre",
                                 worstMonthHours: 3}},
-   { name: "Pelin", img: temp, stats: {
-                                messages: 469,
-                                vocalTime: 432,
-                                bestMonth: "Juillet",
-                                bestMonthHours: 107,
-                                worstMonth: "Mai",
-                                worstMonthHours: 0.28}},
    { name: "Renard", img: renard, stats: {
                                 messages: 9967,
                                 vocalTime: 684,
