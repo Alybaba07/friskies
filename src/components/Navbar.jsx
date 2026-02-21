@@ -18,6 +18,7 @@ function Navbar() {
               </svg>
             </a>
 
+            {/* --- menu nav sur tel --- */}
             <div className="md:hidden">
               <button className="text-gray-400 hover:text-gray-300" onClick={() => setOpen(!open)}>
                 {!open && (
@@ -33,6 +34,7 @@ function Navbar() {
                 )}
               </button>
             </div>
+
           </div>
 
           <div className={`flex-1 items-center md:mt-0 md:flex ${open ? "block" : "hidden"} mt-4`}>
