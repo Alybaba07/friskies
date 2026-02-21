@@ -26,6 +26,8 @@ const members = [
   { name: "Aaron", img: aaron, stats: {
                                 messagesTot: "61",
                                 messages: "59",
+                                messagesTop: "18eme",
+                                vocalTimeTop: "11eme",
                                 vocalTime: 285,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 174,
@@ -34,6 +36,8 @@ const members = [
  { name: "Aly", img: aly, stats: {
                                 messagesTot: "10 485",
                                 messages: "3 924",
+                                messagesTop: "2eme",
+                                vocalTimeTop: "5eme",
                                 vocalTime: 605,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 125,
@@ -42,6 +46,8 @@ const members = [
   { name: "Amaya", img: amaya, stats: {
                                 messagesTot: "149",
                                 messages: "111",
+                                messagesTop: "16eme",
+                                vocalTimeTop: "18eme",
                                 vocalTime: 130,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 65,
@@ -50,6 +56,8 @@ const members = [
    { name: "Azu", img: azu, stats: {
                                 messagesTot: "988",
                                 messages: "988",
+                                messagesTop: "6eme",
+                                vocalTimeTop: "12eme",
                                 vocalTime: 271,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 95,
@@ -58,6 +66,8 @@ const members = [
    { name: "Booba", img: booba, stats: {
                                 messagesTot: "3 668",
                                 messages: "2 942",
+                                messagesTop: "4eme",
+                                vocalTimeTop: "2eme",
                                 vocalTime: 709,
                                 bestMonth: "Septembre",
                                 bestMonthHours: 209,
@@ -66,6 +76,8 @@ const members = [
   { name: "Charlie", img: charlie, stats: {
                                 messagesTot: "3 916",
                                 messages: "876",
+                                messagesTop: "7eme",
+                                vocalTimeTop: "13eme",
                                 vocalTime: 230,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 96,
@@ -74,6 +86,8 @@ const members = [
   { name: "Clem", img: clem, stats: {
                                 messagesTot: "194",
                                 messages: "136",
+                                messagesTop: "14eme",
+                                vocalTimeTop: "19eme",
                                 vocalTime: 52,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 18,
@@ -82,6 +96,8 @@ const members = [
    { name: "Frisk", img: frisk, stats: {
                                 messagesTot: "1 876",
                                 messages: "1 598",
+                                messagesTop: "5eme",
+                                vocalTimeTop: "17eme",
                                 vocalTime: 142,
                                 bestMonth: "Mars",
                                 bestMonthHours: 26,
@@ -90,6 +106,8 @@ const members = [
    { name: "Haddamas", img: haddamas, stats: {
                                 messagesTot: "1 400",
                                 messages: "377",
+                                messagesTop: "11eme",
+                                vocalTimeTop: "4eme",
                                 vocalTime: 679,
                                 bestMonth: "Juillet",
                                 bestMonthHours: 139,
@@ -98,12 +116,16 @@ const members = [
   { name: "Léguman", img: legu, stats: {
                                 messagesTot: "10",
                                 messages: "10",
+                                messagesTop: "20eme",
+                                vocalTimeTop: "21eme",
                                 vocalTime: 0,
                                 bestMonth: "None",
                                 worstMonth: "None"}},
   { name: "Letalia", img: letalia, stats: {
                                 messagesTot: "8",
                                 messages: "8",
+                                messagesTop: "21eme",
+                                vocalTimeTop: "20eme",
                                 vocalTime: 30,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 25,
@@ -112,6 +134,8 @@ const members = [
   { name: "Max", img: max, stats: {
                                 messagesTot: "8 698",
                                 messages: "3 542",
+                                messagesTop: "3eme",
+                                vocalTimeTop: "1er",
                                 vocalTime: 909,
                                 bestMonth: "Octobre",
                                 bestMonthHours: 211,
@@ -120,6 +144,8 @@ const members = [
    { name: "Mélo", img: melo, stats: {
                                 messagesTot: "5 947",
                                 messages: "308",
+                                messagesTop: "12eme",
+                                vocalTimeTop: "10eme",
                                 vocalTime: 292,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 188,
@@ -128,6 +154,8 @@ const members = [
    { name: "Nymso", img: nymso, stats: {
                                 messagesTot: "82",
                                 messages: "82",
+                                messagesTop: "17eme",
+                                vocalTimeTop: "9eme",
                                 vocalTime: 306,
                                 bestMonth: "Octobre",
                                 bestMonthHours: 132,
@@ -136,6 +164,8 @@ const members = [
    { name: "Pacifica", img: pacifica, stats: {
                                 messagesTot: "2 937",
                                 messages: "29",
+                                messagesTop: "19eme",
+                                vocalTimeTop: "14eme",
                                 vocalTime: 221,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 88,
@@ -144,6 +174,8 @@ const members = [
    { name: "Renard", img: renard, stats: {
                                 messagesTot: "14 294",
                                 messages: "9 967",
+                                messagesTop: "1er",
+                                vocalTimeTop: "3eme",
                                 vocalTime: 684,
                                 bestMonth: "Août",
                                 bestMonthHours: 130,
@@ -152,6 +184,8 @@ const members = [
  { name: "Vince", img: vince, stats: {
                                 messagesTot: "153",
                                 messages: "136",
+                                messagesTop: "15eme",
+                                vocalTimeTop: "16eme",
                                 vocalTime: 165,
                                 bestMonth: "Août",
                                 bestMonthHours: 57,
@@ -160,6 +194,8 @@ const members = [
 { name: "Yayourt", img: ayoub, stats: {
                                 messagesTot: "2 950",
                                 messages: "724",
+                                messagesTop: "",
+                                vocalTimeTop: "",
                                 vocalTime: 596,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 230,
