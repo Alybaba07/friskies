@@ -194,8 +194,8 @@ const members = [
 { name: "Yayourt", img: ayoub, stats: {
                                 messagesTot: "2 950",
                                 messages: "724",
-                                messagesTop: "",
-                                vocalTimeTop: "",
+                                messagesTop: "8eme",
+                                vocalTimeTop: "6eme",
                                 vocalTime: 596,
                                 bestMonth: "Janvier",
                                 bestMonthHours: 230,
@@ -225,8 +225,12 @@ function FlashbackPerso2025() {
         },
         {
           title: "Mais combien de messages étaient destinés à de réelles conversations ?",
-          subtitle: `${member.stats.messages} messages `,
+          subtitle: `${member.stats.messages} messages. Feras-tu mieux l'année prochaine ? `,
         },
+        {
+          title: `Avec un tel nombre, tu te classes à la ${member.stats.messagesTop} place sur 84 personnes`,
+          subtitle: `Dont ${members.length} membres actifs cette année !`,
+        },      
         {
           title:
             "L'écrit c'est bien beau, mais as-tu partagé ta belle et douce voix en vocal ?",
@@ -253,6 +257,10 @@ function FlashbackPerso2025() {
             }
           })(),
         },
+        {
+          title: `Tu te retrouves à la ${member.stats.vocalTimeTop} place sur 84 personnes`,
+          subtitle: `Dont ${members.length} membres actifs cette année`,
+        }, 
       ]
     : [];
 
