@@ -14,7 +14,7 @@ function PresMembres() {
                 <span className="underline decoration-red-500">Membres</span> du serveur
             </h2>
             <p className="text-stone-100 text-xl max-w-2xl mx-auto font-extralight mt-6">
-                Le meilleur moyen de découvrir qui compose le serveur, depuis combien de temps ou encore d'apprendre à les connaitre : c'est juste ici ↓
+                Le meilleur moyen de découvrir qui compose le serveur, depuis combien de temps ou encore d'apprendre à les connaitre : c'est juste ici !
             </p>
         </div>
 
