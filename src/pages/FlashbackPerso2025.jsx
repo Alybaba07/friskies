@@ -13,6 +13,7 @@ import charlie from "../assets/charlie.png";
 import clem from "../assets/clem.png";
 import frisk from "../assets/frisk.png";
 import haddamas from "../assets/haddamas.png";
+import kyky from "../assets/kyky.png";
 import legu from "../assets/legu.png";
 import letalia from "../assets/letalia.png";
 import max from "../assets/max.png";
@@ -113,6 +114,16 @@ const members = [
                                 bestMonthHours: 139,
                                 worstMonth: "Mai",
                                 worstMonthHours: 4}},
+  { name: "Kyky", img: kyky, stats: {
+                                messagesTot: "551",
+                                messages: "550",
+                                messagesTop: "9eme",
+                                vocalTimeTop: "8eme",
+                                vocalTime: 351,
+                                bestMonth: "Août",
+                                bestMonthHours: 90,
+                                worstMonth: "Avril",
+                                worstMonthHours: 7}},
   { name: "Léguman", img: legu, stats: {
                                 messagesTot: "10",
                                 messages: "10",
